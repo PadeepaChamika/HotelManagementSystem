@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomDetailsFormController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="317.0" prefHeight="39.0" prefWidth="969.0" style="-fx-background-color: #0652DD;">
+         <children>
+            <Label layoutX="392.0" layoutY="5.0" text="AVAILABLE ROOMS" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchAvailable" layoutX="111.0" layoutY="7.0" onAction="#searchAvailableOnAction" prefHeight="25.0" prefWidth="250.0" promptText="Input Room Name" />
+            <Label layoutX="26.0" layoutY="4.0" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="46.0" prefHeight="39.0" prefWidth="969.0" style="-fx-background-color: #0652DD;">
+         <children>
+            <Label layoutX="33.0" layoutY="5.0" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="11.0" text="BOOKING ROOMS" underline="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-3.0" prefHeight="39.0" prefWidth="969.0" style="-fx-background-color: #0652DD;">
+         <children>
+            <Label layoutX="378.0" layoutY="4.0" text="ROOM DETAILS" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="575.0" layoutY="11.0" prefHeight="17.0" prefWidth="370.0" />
+            <Separator layoutX="21.0" layoutY="11.0" prefHeight="17.0" prefWidth="357.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblBookingRooms" layoutX="6.0" layoutY="85.0" prefHeight="221.0" prefWidth="959.0">
+        <columns>
+          <TableColumn fx:id="colBookingId" prefWidth="75.0" text="Booking ID" />
+          <TableColumn fx:id="colBookingRoomId" prefWidth="75.0" text="Room ID" />
+            <TableColumn fx:id="colGuestId" prefWidth="75.0" text="Guest ID" />
+            <TableColumn fx:id="colCheckingInDate" prefWidth="128.0" text="Checking In Date" />
+            <TableColumn fx:id="colCheckingInTime" prefWidth="143.0" text="Checking In Time" />
+            <TableColumn fx:id="colCheckingOutDate" prefWidth="137.0" text="Checking Out Date" />
+            <TableColumn fx:id="colCheckingOutTime" prefWidth="153.0" text="Checking Out Time" />
+            <TableColumn fx:id="colCost" prefWidth="172.0" text="Cost" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblAvailableRooms" layoutX="4.0" layoutY="356.0" prefHeight="221.0" prefWidth="959.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="124.0" text="Room ID" />
+          <TableColumn fx:id="colRoomName" prefWidth="227.0" text="Room Name" />
+            <TableColumn fx:id="colRoomType" prefWidth="223.0" text="Room Type" />
+            <TableColumn fx:id="colFloor" prefWidth="188.0" text="Floor" />
+            <TableColumn fx:id="colPrice" prefWidth="185.0" text="Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearchBooking" layoutX="107.0" layoutY="53.0" onAction="#searchBookingOnAction" prefHeight="25.0" prefWidth="250.0" promptText="Input Guest Id" />
+   </children>
+</AnchorPane>

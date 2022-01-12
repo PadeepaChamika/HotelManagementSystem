@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addFoodAnchorPaneContext" prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FoodFormController">
+    <children>
+        <Label layoutX="396.0" layoutY="18.0" text="ADD NEW FOOD" textFill="#d0e8e6">
+            <font>
+                <Font name="Bell MT Bold" size="24.0" />
+            </font>
+        </Label>
+        <Separator layoutX="50.0" layoutY="32.0" prefHeight="0.0" prefWidth="337.0" />
+        <Separator layoutX="600.0" layoutY="35.0" prefHeight="0.0" prefWidth="337.0" />
+        <Label layoutX="138.0" layoutY="88.0" text="Food Id :" textFill="WHITE">
+            <font>
+                <Font name="Calisto MT Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="123.0" layoutY="148.0" text="Food Type :" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="171.0" layoutY="206.0" text="Qty :" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtFoodId" layoutX="246.0" layoutY="85.0" prefHeight="30.0" prefWidth="193.0" />
+        <TextField fx:id="txtQty" layoutX="246.0" layoutY="201.0" prefHeight="30.0" prefWidth="92.0" />
+        <TableView fx:id="tblFood" layoutX="123.0" layoutY="276.0" prefHeight="263.0" prefWidth="610.0">
+            <columns>
+                <TableColumn fx:id="colFoodId" prefWidth="140.0" text="Food Id" />
+                <TableColumn fx:id="colFoodType" prefWidth="205.0" text="Food Type" />
+                <TableColumn fx:id="colQty" prefWidth="132.0" text="Qty" />
+                <TableColumn prefWidth="132.0" text="Delete" />
+            </columns>
+        </TableView>
+        <JFXButton buttonType="RAISED" layoutX="553.0" layoutY="225.0" onMouseClicked="#onAddNewFood" style="-fx-background-radius: 50; -fx-background-color: #192a56;" text="Add Food" textFill="WHITE">
+            <font>
+                <Font name="Bell MT Bold" size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="710.0" layoutY="225.0" onMouseClicked="#onModifyFood" style="-fx-background-radius: 50; -fx-background-color: #222f3e;" text="Modify Food" textFill="WHITE">
+            <font>
+                <Font name="Bell MT Bold" size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <TextField fx:id="txtFoodType" layoutX="246.0" layoutY="143.0" prefHeight="30.0" prefWidth="193.0" />
+    </children>
+</AnchorPane>

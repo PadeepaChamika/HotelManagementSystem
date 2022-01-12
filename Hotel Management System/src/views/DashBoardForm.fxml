@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homePageAnchorPaneContext" prefHeight="608.0" prefWidth="968.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="968.0" opacity="0.69" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/DashBoard.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="34.0" text="SEA LINE" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="60.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="122.0" text="HOTEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="60.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="210.0" text="SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="60.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="99.0" fitWidth="144.0" layoutX="150.0" layoutY="292.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="87.0" layoutY="407.0" text="User Name :" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Condensed Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="457.0" text="Password   :" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Condensed Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="235.0" layoutY="413.0" />
+      <PasswordField fx:id="txtPassword" layoutX="235.0" layoutY="462.0" />
+      <JFXButton buttonType="RAISED" layoutX="161.0" layoutY="511.0" onMouseClicked="#loginHomePage" prefHeight="36.0" prefWidth="122.0" style="-fx-background-radius: 50; -fx-background-color: #dff9fb;" text="LOGIN" textFill="#0652dd">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="814.0" layoutY="577.0" text="Version 1.0.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

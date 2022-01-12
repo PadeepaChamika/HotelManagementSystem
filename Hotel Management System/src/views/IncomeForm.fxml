@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeFormController">
+   <children>
+      <Label layoutX="441.0" layoutY="16.0" text="Income Report" textFill="#d0e8e6">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font></Label>
+      <AnchorPane layoutX="49.0" layoutY="69.0" prefHeight="219.0" prefWidth="220.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="65.0" layoutY="14.0" text="Daily Income">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font></Label>
+            <JFXButton layoutX="55.0" layoutY="170.0" onAction="#PrintDateIncome" prefHeight="35.0" prefWidth="106.0" style="-fx-background-radius: 50; -fx-background-color: red;" text="Print Report" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXComboBox fx:id="cmbDate" labelFloat="true" layoutX="24.0" layoutY="75.0" prefHeight="25.0" prefWidth="168.0" promptText="Select Date" />
+            <Label fx:id="lblDailyTotal" alignment="TOP_CENTER" layoutY="125.0" prefHeight="32.0" prefWidth="222.0" style="-fx-background-color: green;" text="0000.00" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="380.0" layoutY="69.0" prefHeight="219.0" prefWidth="220.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="50.0" layoutY="14.0" text="Monthly Income">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font></Label>
+            <JFXButton layoutX="64.0" layoutY="170.0" onAction="#PrintMonthlyReport" prefHeight="35.0" prefWidth="92.0" style="-fx-background-radius: 50; -fx-background-color: #95afc0;" text="Print Report">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXComboBox fx:id="cmbMonth" labelFloat="true" layoutX="26.0" layoutY="75.0" prefHeight="25.0" prefWidth="168.0" promptText="Select Month" />
+            <Label fx:id="lblMonthlyTotal" alignment="TOP_CENTER" layoutY="124.0" prefHeight="32.0" prefWidth="222.0" style="-fx-background-color: green;" text="0000.00" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="712.0" layoutY="69.0" prefHeight="219.0" prefWidth="222.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="60.0" layoutY="14.0" text="Yearly Income">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font></Label>
+            <JFXButton layoutX="65.0" layoutY="170.0" onAction="#printYearlyReport" prefHeight="35.0" prefWidth="92.0" style="-fx-background-radius: 50; -fx-background-color: #95afc0;" text="Print Report">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXComboBox fx:id="cmbYear" labelFloat="true" layoutX="29.0" layoutY="75.0" prefHeight="25.0" prefWidth="168.0" promptText="Select Year" />
+            <Label fx:id="lblYearlyTotal" alignment="TOP_CENTER" layoutY="128.0" prefHeight="32.0" prefWidth="222.0" style="-fx-background-color: green;" text="0000.00" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblIncome" layoutX="23.0" layoutY="304.0" prefHeight="247.0" prefWidth="923.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="131.0" text="ID" />
+          <TableColumn fx:id="colBookingCost" prefWidth="176.0" text="Booking Cost" />
+            <TableColumn fx:id="colMealCost" prefWidth="201.0" text="Meal Plan Cost" />
+            <TableColumn fx:id="colDate" prefWidth="222.0" text="Date" />
+            <TableColumn fx:id="colTotal" prefWidth="192.0" text="Total" />
+        </columns>
+      </TableView>
+      <Separator layoutX="15.0" layoutY="29.0" prefHeight="3.0" prefWidth="420.0" />
+      <Separator layoutX="599.0" layoutY="30.0" prefHeight="3.0" prefWidth="336.0" />
+   </children>
+</AnchorPane>

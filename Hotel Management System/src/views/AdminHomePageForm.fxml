@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminHomeAnchorPaneContext" prefHeight="608.0" prefWidth="968.0" style="-fx-background-color: #0652DD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminHomePageFormController">
+   <children>
+      <AnchorPane prefHeight="69.0" prefWidth="968.0" style="-fx-background-color: silver;">
+         <children>
+            <Label layoutX="14.0" layoutY="19.0" text="ADMIN HOME PAGE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="396.0" layoutY="20.0" onMouseClicked="#onAdd_Modify_DeleteRoom" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #0652DD;" text="Room" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="532.0" layoutY="20.0" onMouseClicked="#onAdd_Modify_DeleteMealPackage" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #0652DD;" text="Meal Package" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="666.0" layoutY="20.0" onMouseClicked="#onAdd_Modify_Delete_Meal" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #0652DD;" text="FOOD" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="776.0" layoutY="20.0" onMouseClicked="#onIncomeReport" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #0652DD;" text="INCOME" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="241.0" layoutY="20.0" onMouseClicked="#onAddNewEmployee" prefHeight="31.0" prefWidth="145.0" style="-fx-background-color: #0652DD;" text="Manage Employee" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="886.0" layoutY="20.0" onMouseClicked="#onBackToDashBoard" style="-fx-background-color: #EA2027;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <ImageView fitHeight="262.0" fitWidth="351.0" layoutX="70.0" layoutY="110.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/hotel-room.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="357.0" layoutX="198.0" layoutY="262.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/double-room-with-sea.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="389.0" layoutX="507.0" layoutY="119.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/copyright+Fishermans+Market.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="252.0" fitWidth="312.0" layoutX="636.0" layoutY="277.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/1908_Salmon-Poke-Bowl_550-500x375.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="329.0" layoutX="70.0" layoutY="417.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/gold-income-sign-investment-concept-golden-background-with-finance-economy-3d-rendering_79161-1678.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="344.0" layoutX="484.0" layoutY="433.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Passive_Income_for_College_Students__ndash__Top_15_Ideas.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="tableAnchorPaneContext" layoutY="69.0" prefHeight="587.0" prefWidth="968.0" />
+   </children>
+</AnchorPane>

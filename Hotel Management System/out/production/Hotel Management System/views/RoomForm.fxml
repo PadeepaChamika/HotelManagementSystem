@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addNewRoomAnchorPaneContext" prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomFormController">
+   <children>
+      <Label layoutX="382.0" layoutY="14.0" text="ADD NEW ROOM" textFill="#d0e8e6">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="33.0" layoutY="28.0" prefHeight="3.0" prefWidth="341.0" />
+      <Separator layoutX="596.0" layoutY="27.0" prefHeight="2.0" prefWidth="341.0" />
+      <Label layoutX="51.0" layoutY="68.0" text="Room Id :" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRoomId" layoutX="136.0" layoutY="68.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label layoutX="404.0" layoutY="71.0" text="Room Name :" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="120.0" text="Room Type :" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbRoomType" layoutX="144.0" layoutY="117.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="84.0" layoutY="174.0" text="Floor :" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbFloor" layoutX="144.0" layoutY="171.0" prefHeight="25.0" prefWidth="247.0" />
+      <Label layoutX="462.0" layoutY="141.0" text="Room Description :" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescription" layoutX="615.0" layoutY="117.0" prefHeight="92.0" prefWidth="247.0" />
+      <TableView fx:id="tblAddNewRoomDetails" layoutX="16.0" layoutY="297.0" prefHeight="282.0" prefWidth="943.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="103.0" text="Room Id" />
+          <TableColumn fx:id="colRoomName" prefWidth="118.0" text="Room Name" />
+            <TableColumn fx:id="colRoomType" prefWidth="160.0" text="Room Type" />
+            <TableColumn fx:id="colFloor" prefWidth="168.0" text="Floor" />
+            <TableColumn fx:id="colDescription" prefWidth="232.0" text="Description" />
+            <TableColumn fx:id="colPrice" prefWidth="160.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="530.0" layoutY="246.0" onMouseClicked="#onAddNewRoom" style="-fx-background-radius: 50; -fx-background-color: #192a56;" text="Add Room" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="665.0" layoutY="246.0" onMouseClicked="#onModifyRoom" style="-fx-background-radius: 50; -fx-background-color: #222f3e;" text="Modify Room" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="828.0" layoutY="249.0" onMouseClicked="#onDeleteRoom" style="-fx-background-radius: 50; -fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="84.0" layoutY="224.0" text="Price :" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrice" layoutX="144.0" layoutY="221.0" />
+      <RadioButton fx:id="rbSingle" layoutX="530.0" layoutY="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" text="Single">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgRoomName" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rbDouble" layoutX="600.0" layoutY="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" text="Double" toggleGroup="$tgRoomName" />
+      <RadioButton fx:id="rbTriple" layoutX="679.0" layoutY="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" text="Triple" toggleGroup="$tgRoomName" />
+   </children>
+</AnchorPane>

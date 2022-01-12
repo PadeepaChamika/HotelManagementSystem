@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomDetailsFormController">
+   <children>
+      <Label layoutX="447.0" layoutY="10.0" text="ROOM DETAILS" textFill="#d0e8e6">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="340.0" text="Search" textFill="WHITE" />
+      <TextField fx:id="txtSearchAvailable" layoutX="90.0" layoutY="336.0" onAction="#searchAvailableOnAction" promptText="Input Room Name" />
+      <TableView fx:id="tblBookingRooms" layoutX="22.0" layoutY="111.0" prefHeight="200.0" prefWidth="924.0">
+        <columns>
+          <TableColumn fx:id="colBookingId" prefWidth="75.0" text="Booking ID" />
+          <TableColumn fx:id="colBookingRoomId" prefWidth="75.0" text="Room ID" />
+            <TableColumn fx:id="colGuestId" prefWidth="75.0" text="Guest ID" />
+            <TableColumn fx:id="colCheckingInDate" prefWidth="128.0" text="Checking In Date" />
+            <TableColumn fx:id="colCheckingInTime" prefWidth="143.0" text="Checking In Time" />
+            <TableColumn fx:id="colCheckingOutDate" prefWidth="137.0" text="Checking Out Date" />
+            <TableColumn fx:id="colCheckingOutTime" prefWidth="153.0" text="Checking Out Time" />
+            <TableColumn fx:id="colCost" prefWidth="137.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Label layoutX="419.0" layoutY="77.0" text="BOOKING ROOMS" textFill="#c92905" underline="true">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font></Label>
+      <TableView fx:id="tblAvailableRooms" layoutX="22.0" layoutY="374.0" prefHeight="200.0" prefWidth="924.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="124.0" text="Room ID" />
+          <TableColumn fx:id="colRoomName" prefWidth="227.0" text="Room Name" />
+            <TableColumn fx:id="colRoomType" prefWidth="223.0" text="Room Type" />
+            <TableColumn fx:id="colFloor" prefWidth="188.0" text="Floor" />
+            <TableColumn fx:id="colPrice" prefWidth="161.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="79.0" text="Search" textFill="WHITE" />
+      <TextField fx:id="txtSearchBooking" layoutX="90.0" layoutY="75.0" onAction="#searchBookingOnAction" promptText="Input Guest Id" />
+      <Label layoutX="408.0" layoutY="338.0" text="AVAILABLE ROOMS" textFill="#c92905" underline="true">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font></Label>
+      <Separator layoutX="17.0" layoutY="25.0" prefHeight="5.0" prefWidth="426.0" />
+      <Separator layoutX="637.0" layoutY="25.0" prefHeight="5.0" prefWidth="309.0" />
+   </children>
+</AnchorPane>

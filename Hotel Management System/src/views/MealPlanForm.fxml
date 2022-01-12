@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealPlanFormController">
+   <children>
+      <AnchorPane prefHeight="41.0" prefWidth="970.0" style="-fx-background-color: #0652DD;" />
+      <AnchorPane layoutX="-1.0" layoutY="46.0" prefHeight="311.0" prefWidth="970.0" style="-fx-background-color: white;">
+         <children>
+            <ComboBox fx:id="cmbMealPlanType" layoutX="127.0" layoutY="176.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="24.0" layoutY="180.0" text="Meal Plan Type :" />
+            <ComboBox fx:id="cmbMeal" layoutX="127.0" layoutY="225.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="24.0" layoutY="229.0" text="Remarks           :" />
+            <Label layoutX="313.0" layoutY="229.0" text="Extra Price :" />
+            <TextField fx:id="txtExtraPrice" layoutX="390.0" layoutY="225.0" prefHeight="25.0" prefWidth="242.0" promptText="Price Rs :" />
+            <Label layoutX="22.0" layoutY="43.0" text="Booking ID         :" />
+            <ComboBox fx:id="cmbBookingId" layoutX="127.0" layoutY="39.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label fx:id="lblMealPlanId" layoutX="136.0" layoutY="3.0" prefHeight="30.0" prefWidth="56.0" text="MP-001" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Unicode MS" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="7.0" text="MEAL PLAN ID :">
+               <font>
+                  <Font name="Arial Unicode MS" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="130.0" text="Meal Package ID :" />
+            <TextField fx:id="txtMealPlanPrice" layoutX="297.0" layoutY="176.0" prefHeight="25.0" prefWidth="334.0" promptText="Price Rs :" />
+            <JFXButton buttonType="RAISED" layoutX="536.0" layoutY="265.0" onMouseClicked="#onAddMealPlan" prefHeight="29.0" prefWidth="190.0" style="-fx-background-radius: 50; -fx-background-color: #1B1464;" text="Add Meal Plan" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="311.0" layoutY="265.0" onMouseClicked="#onModifyMealPlan" prefHeight="30.0" prefWidth="190.0" style="-fx-background-radius: 50; -fx-background-color: #44bd32;" text="Modify Meal Plan" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="69.0" layoutY="265.0" onMouseClicked="#onRemoveMealPlan" prefHeight="29.0" prefWidth="190.0" style="-fx-background-radius: 50; -fx-background-color: #EA2027;" text="Remove" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutY="-71.0" prefHeight="41.0" prefWidth="970.0">
+               <children>
+                  <Label layoutX="422.0" layoutY="32.0" text="MEAL PLAN" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="571.0" layoutY="33.0" prefHeight="25.0" prefWidth="368.0" />
+                  <Separator layoutX="29.0" layoutY="33.0" prefHeight="25.0" prefWidth="384.0" />
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtRoomId" layoutX="311.0" layoutY="33.0" prefHeight="25.0" prefWidth="159.0" promptText="Room ID" />
+            <JFXTextField fx:id="txtGuestId" layoutX="485.0" layoutY="33.0" prefHeight="25.0" prefWidth="149.0" promptText="Guest ID" />
+            <JFXTextField fx:id="txtCheckingInDate" layoutX="667.0" layoutY="33.0" promptText="Checking In Date" />
+            <JFXTextField fx:id="txtCheckingInTime" layoutX="829.0" layoutY="33.0" prefHeight="25.0" prefWidth="121.0" promptText="Checking In Time" />
+            <JFXTextField fx:id="txtCheckingOutDate" layoutX="305.0" layoutY="79.0" prefHeight="25.0" prefWidth="159.0" promptText="Checking Out Date" />
+            <JFXTextField fx:id="txtCheckingOutTime" layoutX="485.0" layoutY="79.0" prefHeight="25.0" prefWidth="149.0" promptText="Checking Out Time" />
+            <JFXTextField fx:id="txtCost" layoutX="667.0" layoutY="79.0" prefHeight="25.0" prefWidth="278.0" promptText="Cost" />
+            <ComboBox fx:id="cmbMealPackageId" layoutX="127.0" layoutY="126.0" prefHeight="25.0" prefWidth="159.0" />
+            <JFXTextField fx:id="txtMealPackageName" layoutX="305.0" layoutY="125.0" prefHeight="25.0" prefWidth="159.0" promptText="Meal Package Name" />
+            <JFXTextField fx:id="txtMealPackageType" layoutX="485.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" promptText="Meal Package Type" />
+            <JFXTextField fx:id="txtPrice" layoutX="663.0" layoutY="126.0" prefHeight="25.0" prefWidth="278.0" promptText="Price" />
+            <Label layoutX="653.0" layoutY="175.0" prefHeight="27.0" prefWidth="142.0" text="Total Cost      -:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalCost" layoutX="802.0" layoutY="175.0" prefHeight="27.0" prefWidth="121.0" text="0000.00" textFill="#ea2027">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="756.0" layoutY="265.0" onAction="#CalculatteTotal" prefHeight="29.0" prefWidth="176.0" style="-fx-background-radius: 50; -fx-background-color: #F79F1F;" text="Calculate Total" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblDates" layoutX="806.0" layoutY="212.0" prefHeight="27.0" prefWidth="56.0" text="00" textFill="#ea2027">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="654.0" layoutY="216.0" prefHeight="27.0" prefWidth="135.0" text="Total Dates    -:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblMealPlan" layoutX="6.0" layoutY="364.0" prefHeight="209.0" prefWidth="957.0">
+        <columns>
+          <TableColumn fx:id="colMealPlanId" prefWidth="105.0" text="Meal Plan ID" />
+          <TableColumn fx:id="colBookingId" prefWidth="122.0" text="Booking Id" />
+            <TableColumn fx:id="colMealPackageId" prefWidth="145.0" text="Meal Package Id" />
+            <TableColumn fx:id="colMealPlanType" prefWidth="175.0" text="Meal Plan Type" />
+            <TableColumn fx:id="colRemarks" prefWidth="251.0" text="Remarks" />
+            <TableColumn fx:id="colTotalPrice" prefWidth="158.0" text="Total Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

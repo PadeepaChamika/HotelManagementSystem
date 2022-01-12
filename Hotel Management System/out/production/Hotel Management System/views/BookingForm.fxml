@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingFormController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="48.0" opacity="0.68" prefHeight="276.0" prefWidth="941.0" style="-fx-background-color: White;" />
+      <Label layoutX="382.0" layoutY="14.0" text="BOOKING TABLE" textFill="#d0e8e6">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="586.0" layoutY="30.0" prefHeight="1.0" prefWidth="344.0" />
+      <Separator layoutX="38.0" layoutY="28.0" prefHeight="1.0" prefWidth="344.0" />
+      <Label fx:id="lblBookingId" layoutX="48.0" layoutY="64.0" text="BOOKING ID :" textFill="WHITE">
+         <font>
+            <Font name="Arial Unicode MS" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookingNum" layoutX="150.0" layoutY="60.0" prefHeight="30.0" prefWidth="50.0" text="B-001" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Unicode MS" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="625.0" layoutY="60.0" prefHeight="30.0" prefWidth="110.0" text="Sep/14/2021" textFill="#2e1ebc">
+         <font>
+            <Font name="Bernard MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="769.0" layoutY="60.0" prefHeight="30.0" prefWidth="160.0" text="11.03.10" textFill="#390ccd">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="127.0" text="Guest ID :" />
+      <TextField fx:id="txtGuestId" layoutX="111.0" layoutY="123.0" onAction="#guestDetailsOnAction" />
+      <JFXTextField fx:id="txtGuestName" focusColor="#19538d" layoutX="315.0" layoutY="123.0" promptText="Guest Name" />
+      <JFXTextField fx:id="txtGuestAddress" layoutX="484.0" layoutY="123.0" promptText="Guest Address" />
+      <JFXTextField fx:id="txtNIC" layoutX="659.0" layoutY="123.0" promptText="NIC / Passport ID" />
+      <JFXTextField fx:id="txtContact" layoutX="819.0" layoutY="123.0" prefHeight="25.0" prefWidth="127.0" promptText="Contact" />
+      <Label layoutX="49.0" layoutY="199.0" text="Room ID :" />
+      <ComboBox fx:id="cmbRoomId" layoutX="111.0" layoutY="195.0" prefWidth="150.0" />
+      <JFXTextField fx:id="txtRoomName" layoutX="315.0" layoutY="195.0" promptText="Room Name" />
+      <JFXTextField fx:id="txtRoomType" layoutX="484.0" layoutY="195.0" promptText="Room Type" />
+      <JFXTextField fx:id="txtCost" layoutX="659.0" layoutY="195.0" promptText="Cost" />
+      <TableView fx:id="tblBookingDetails" layoutX="10.0" layoutY="330.0" prefHeight="241.0" prefWidth="949.0">
+        <columns>
+          <TableColumn fx:id="colBookingId" prefWidth="83.0" text="Booking ID" />
+          <TableColumn fx:id="colGuestId" prefWidth="84.0" text="Guest ID" />
+            <TableColumn fx:id="colRoomId" prefWidth="77.0" text="Room ID" />
+            <TableColumn fx:id="colCheckingInDate" prefWidth="141.0" text="Checking In Date" />
+            <TableColumn fx:id="colCheckingInTime" prefWidth="148.0" text="Checking In Time" />
+            <TableColumn fx:id="colCheckingOutDate" prefWidth="149.0" text="Checking Out Date" />
+            <TableColumn fx:id="colCheckingOutTime" prefWidth="141.0" text="Checking Out Time" />
+            <TableColumn fx:id="colCost" prefWidth="125.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Label layoutX="48.0" layoutY="252.0" text="Checking Out :" />
+      <TextField fx:id="txtCheckingOut" layoutX="136.0" layoutY="248.0" />
+      <Label layoutX="337.0" layoutY="252.0" text="Time :" />
+      <Label fx:id="lblCheckingOutTime" layoutX="383.0" layoutY="248.0" prefHeight="25.0" prefWidth="135.0" text="12.00 PM">
+         <font>
+            <Font name="Bodoni MT Black" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="586.0" layoutY="273.0" onMouseClicked="#onAddBooking" style="-fx-background-radius: 50; -fx-background-color: #192a56;" text="Add Booking" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="708.0" layoutY="273.0" onMouseClicked="#onModifyBooking" style="-fx-background-radius: 50; -fx-background-color: #222f3e;" text="Modify Booking" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="861.0" layoutY="273.0" onMouseClicked="#onDeleteBooking" style="-fx-background-radius: 50; -fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

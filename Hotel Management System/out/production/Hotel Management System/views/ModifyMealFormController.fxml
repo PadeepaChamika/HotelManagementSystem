@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="modifyMealAnchorPaneContext" prefHeight="347.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyMealFormController">
+    <children>
+        <Label layoutX="160.0" layoutY="14.0" text="MODIFY MEAL">
+            <font>
+                <Font name="Bell MT Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="110.0" layoutY="65.0" text="Meal Id :">
+            <font>
+                <Font name="Calisto MT Bold" size="17.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtMealId" layoutX="185.0" layoutY="64.0" onAction="#onSetAllMeals" prefHeight="25.0" prefWidth="204.0" />
+        <Label layoutX="143.0" layoutY="171.0" text="Qty :">
+            <font>
+                <Font name="Century Gothic Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtQty" layoutX="185.0" layoutY="168.0" />
+        <Separator layoutX="29.0" layoutY="27.0" prefHeight="3.0" prefWidth="130.0" />
+        <Separator layoutX="347.0" layoutY="27.0" prefHeight="3.0" prefWidth="130.0" />
+        <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="224.0" onMouseClicked="#onModifyMealDetails" prefHeight="37.0" prefWidth="149.0" style="-fx-background-color: #222f3e; -fx-background-radius: 50;" text="Modify Meal" textFill="WHITE">
+            <font>
+                <Font name="Bell MT Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <Label layoutX="88.0" layoutY="114.0" text="Meal Type :">
+         <font>
+            <Font name="Calisto MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMealType" layoutX="185.0" layoutY="113.0" prefHeight="25.0" prefWidth="204.0" />
+    </children>
+</AnchorPane>
